@@ -4,7 +4,7 @@ require 'sinatra'
 class Player
   attr_accessor :name, :score
 
-  def initialize(name, score = 100)
+  def initialize(name = "Incognito", score = 100)
     @name = name
     @score = score
   end

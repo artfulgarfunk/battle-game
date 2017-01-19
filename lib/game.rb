@@ -12,6 +12,9 @@ class Game
   end
 
   def switch
+    player = @player_one
+    @player_one = @player_two
+    @player_two = player
   end
-  
+
 end

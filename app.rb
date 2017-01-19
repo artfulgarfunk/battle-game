@@ -23,12 +23,15 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
+  post '/attack' do
     @player_1_name = $game.player_one.name
     @player_2_name = $game.player_two.name
     $game.attack($game.player_two)
-    @score = $game.player_two.score
-    erb :attack
+    @score_one = $game.player_one.score
+    @score_two = $game.player_two.score
+    @attacked = true
+    $game.switch
+    erb :play
   end
 
   # start the server if ruby file executed directly

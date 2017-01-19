@@ -2,4 +2,16 @@
 
 <br>
 
-<a href="/attack">Attack</a>
+<form action="/attack" method="post">
+  <input type="submit" value="ATTACK">
+</form>
+
+<% if @attacked %>
+
+<%= @player_1_name %> HP: <%= @score_one %>
+
+<br>
+
+<%= @player_2_name %> HP: <%= @score_two %>
+
+<% end %>

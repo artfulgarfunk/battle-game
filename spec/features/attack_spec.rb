@@ -13,4 +13,10 @@ feature "Attack" do
     expect(page).to have_content "Ben HP: 90"
   end
 
+  scenario "player 2 to attack second" do
+    sign_in_and_play
+    click_link "Attack"
+    expect(page).to have_content "Ben HP: 90"
+    expect(page).to have_content "Dylan HP: 90"
+  end 
 end

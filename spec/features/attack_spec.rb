@@ -6,4 +6,11 @@ feature "Attack" do
     click_link "Attack"
     expect(page).to have_content "Dylan attacked Ben"
   end
+
+  scenario "player 2 gets attacked" do
+    sign_in_and_play
+    click_link "Attack"
+    expect(page).to have_content "Ben HP: 90"
+  end
+
 end
